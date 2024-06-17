@@ -1,6 +1,6 @@
 import expreess from 'express';
 import { singup } from '../controllers/auth.controller.js';
-import { singin } from '../controllers/auth.controller.js';
+import { singin, google } from '../controllers/auth.controller.js';
 
 const router = expreess.Router();
 
