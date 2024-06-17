@@ -6,6 +6,7 @@ const router = expreess.Router();
 
 router.post('/signup', singup)
 router.post('/signin', singin)
+router.post('/google', google)
 
 
 export default router;
