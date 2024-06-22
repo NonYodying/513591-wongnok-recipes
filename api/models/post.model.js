@@ -21,11 +21,11 @@ const postSchema = new mongoose.Schema(
         },
         time: {
             type: String,
-            required: false,
+            required: true,
         },
         difficulty: {
             type: String,
-            required: false,
+            required: true,
         },
         slug: {
             type: String,
