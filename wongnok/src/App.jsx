@@ -7,6 +7,7 @@ import Signup from './pages/Signup'
 import Recipes from './pages/Recipes'
 import Header from './components/Header'
 import PrivateRoute from './components/PrivateRoute'
+import CreatePost from './pages/CreatePost'
 
 export default function App() {
   return (
@@ -17,6 +18,9 @@ export default function App() {
         <Route path='/about' element={<About />}/>   
         <Route element={<PrivateRoute />}>
           <Route path='/dashboard' element={<Dashboard />}/>
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path='/create-post' element={<CreatePost />}/>
         </Route>
         <Route path='/signin' element={<Signin />}/>
         <Route path='/signup' element={<Signup />}/>
