@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 
 
-export default function Dashposts() {
+export default function DashPosts() {
 
   const { currentUser } = useSelector((state)=>state.user);
   const [userPosts, setUserPosts] = useState([]);
