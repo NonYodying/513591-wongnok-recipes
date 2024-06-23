@@ -184,6 +184,7 @@
     "loose-envify": "^1.4.0",
     "lru-cache": "^10.2.2",
     "merge2": "^1.4.1",
+    "mern-wongnok": "file:..",
     "micromatch": "^4.0.7",
     "mini-svg-data-uri": "^1.4.4",
     "minimatch": "^3.1.2",
