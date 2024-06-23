@@ -92,10 +92,10 @@ export default function CreatePost() {
                 
                 <Select  required onChange={(e) => setFormData({ ...formData, time: e.target.value })}> 
                     <option value='uncategorized' >เวลาที่ใช้ทำอาหาร</option>
-                    <option value='time-1' >5-10 mins</option>
-                    <option value='time-2' >11-30 mins</option>
-                    <option value='time-3' >31-60 mins</option>
-                    <option value='time-4' >60+ mins</option>
+                    <option value='5-10 mins' >5-10 mins</option>
+                    <option value='11-30 mins' >11-30 mins</option>
+                    <option value='31-60 mins' >31-60 mins</option>
+                    <option value='60+ mins' >60+ mins</option>
                 </Select>
                 
                 <Select required onChange={(e) => setFormData({ ...formData, difficulty: e.target.value })}> 
