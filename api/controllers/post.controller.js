@@ -9,7 +9,9 @@ export const create = async (req, res, next) => {
     .split(' ')
     .join('-')
     .toLowerCase()
-    .replace(/[^a-zA-Z0-9-]/g, '');
+    .replace(/[^\u0E00-\u0E7F\w\-]+/g, '')
+    .replace(/\-\-+/g,'-')
+    .replace(/^-+/,'')
   const newPost = new Post({
     ...req.body,
     slug,
