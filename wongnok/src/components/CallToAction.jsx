@@ -8,11 +8,11 @@ export default function CallToAction() {
                 Want to learn more about Cooking?
             </h2>
             <p className='text-gray-500 my-2'>
-                Checkout these resources with 10000+ Ricipes
+                Checkout these resources with 10000+ Recipes
             </p>
             <Button gradientDuoTone='purpleToPink' className='rounded-tl-xl rounded-bl-none'>
                 <a href="" target='_blank' rel='noopener noreferrer'>
-                    Free 10000+ Ricipes
+                    Free 10000+ Recipes
                 </a>
             </Button>
         </div>
