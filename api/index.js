@@ -39,12 +39,12 @@ app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoute);
 app.use('/api/comment', commentRoutes);
 
+
 app.use(express.static(path.join(__dirname, '/wongnok/dist')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'wongnok', 'dist', 'index.html'));
-  });
-  
+  res.sendFile(path.join(__dirname, 'wongnok', 'dist', 'index.html'));
+});
 
 app.use((err, rq, res, next) => {
     const statusCode = err.statusCode || 500;
