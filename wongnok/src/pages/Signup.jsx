@@ -15,7 +15,7 @@ export default function Singup() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.username || !formData.email || !formData.password){
+    if (!formData.username || !formData.email || !formData.password) {
       return setErrorMeassgae('Please fill out all fields');
     };
     try {
@@ -23,7 +23,7 @@ export default function Singup() {
       setErrorMeassgae(null);
       const res = await fetch('/api/auth/signup', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
       const data = await res.json();
@@ -31,7 +31,7 @@ export default function Singup() {
         return setErrorMeassgae(data.message);
       }
       setLoading(false);
-      if(res.ok) {
+      if (res.ok) {
         navigate('/signin');
       }
     } catch (error) {
@@ -43,9 +43,14 @@ export default function Singup() {
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
         <div className="flex-1">
-          <Link to={"/"} className=" font-bold dark:text-white text-4xl" >
-          <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">WONGNOK</span>
-          RECIPES
+          <Link
+            to='/'
+            className=" font-bold dark:text-white text-4xl"
+          >
+            <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
+              Wongnok
+            </span>
+            Recipes
           </Link>
           <p className="text-sm mt-5">
             สมัครสมาชิกเลย แล้วมาแบ่งปันเมนูสุดโปรดของคุณให้ทั่วโลกได้โลกรู้จัก เพราะเราเชื่อว่าการแบ่งปันจะทำให้โลกหน้าอยู่ขึน
@@ -57,15 +62,15 @@ export default function Singup() {
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div>
               <Label value='Username' />
-              <TextInput type="text" placeholder="Somngi" id="username" onChange={handleChange}/>
+              <TextInput type="text" placeholder="Somngi" id="username" onChange={handleChange} />
             </div>
             <div>
               <Label value='Email' />
-              <TextInput type="email" placeholder="somngi@company.com" id="email" onChange={handleChange}/>
+              <TextInput type="email" placeholder="somngi@company.com" id="email" onChange={handleChange} />
             </div>
             <div>
               <Label value='Password' />
-              <TextInput type="password" placeholder="strong#password" id="password" onChange={handleChange}/>
+              <TextInput type="password" placeholder="strong#password" id="password" onChange={handleChange} />
             </div>
             <Button gradientDuoTone='purpleToPink' type='submit' disabled={loading}>
               {
@@ -81,7 +86,7 @@ export default function Singup() {
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Have an account?</span>
-            <Link to='/signin' className="text-blue-500">Sing In</Link>
+            <Link to='/sign-in' className="text-blue-500">Sing In</Link>
           </div>
           {
             errorMeassage && (
